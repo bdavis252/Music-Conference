@@ -15,7 +15,7 @@ get_header(); ?>
 <div class="clear"></div>
 <div class="page_content">
     <div class="heading_container">
-        <?php compass_breadcrumbs(); ?>
+        <p id="crumbs"><a href="https://ohldsmusic.org">Home</a> » <a href="https://ohldsmusic.org/biographies/">Biographies</a> » <span class="current"><?php the_title() ?></span></p>
     </div>
     <div class="grid_17 alpha">
         <div class="content_bar">
