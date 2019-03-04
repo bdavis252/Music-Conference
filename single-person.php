@@ -104,11 +104,14 @@ get_header(); ?>
 <?php endif; ?>
             <!--End Post-->	
             <div class="clear"></div>
-            <nav id="nav-single"> <span class="nav-previous">
+            <nav id="nav-single">
+                <span class="nav-previous">
                     <?php previous_post_link('&laquo; %link'); ?>
-                </span> <span class="nav-next">
-<?php next_post_link('%link &raquo;'); ?>
-                </span> </nav>
+                </span> 
+                <span class="nav-next">
+                    <?php next_post_link('%link &raquo;'); ?>
+                </span> 
+            </nav>
         </div>
     </div>
 </div>
