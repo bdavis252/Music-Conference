@@ -179,7 +179,7 @@
                     ?>
                     <li><?php the_field('genre'); ?> - <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> (<?php the_field('composer'); ?>) - 
                         <?php 
-                            for($j = 0; $j < count($performers); ++$j) {
+                            for($j = 0; $j < count($performers)-1; ++$j) {
                                 $performer = $performers[$j];
                                 $id = $performer->ID;
                                 $performer_name = get_the_title($id);
@@ -189,7 +189,7 @@
                                     echo ', ';
                                 }
                             }
-                            echo ', vocalists, ';
+                            echo 'vocalists, ';
                             $performer = $performers[3];
                             $id = $performer->ID;
                             $performer_name = get_the_title($id);
@@ -205,7 +205,7 @@
                     ?>
                     <li><?php the_field('genre'); ?> - <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> (<?php the_field('composer'); ?>) - 
                         <?php 
-                            for($j = 0; $j < count($performers); ++$j) {
+                            for($j = 0; $j < count($performers)-1; ++$j) {
                                 $performer = $performers[$j];
                                 $id = $performer->ID;
                                 $performer_name = get_the_title($id);
@@ -215,7 +215,12 @@
                                     echo ', ';
                                 }
                             }
-                            echo ', trombonists'
+                            echo 'trombonists, ';
+                            $performer = $performers[2];
+                            $id = $performer->ID;
+                            $performer_name = get_the_title($id);
+                            $performer_link = get_the_permalink($id);
+                            echo '<a href="'.$performer_link.'">'.$performer_name.'</a>, pianist';
                         ?>
                     </li>
                     
