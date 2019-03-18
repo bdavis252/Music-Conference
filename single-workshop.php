@@ -32,6 +32,7 @@ get_header(); ?>
                                 if($presenter){
                                     echo 'Presented by: <a class="presenter-title" href="'.$presenter->guid.'">'.$presenter->post_title.'</a>';
                                 }
+                                echo '<br />Track: '.get_field('track');
                                 echo '<br />Room: '.get_field('room');
                                 echo '<br />Time: '.session_to_time(get_field('session')).' (Session '.get_field('session').')';
                             ?>

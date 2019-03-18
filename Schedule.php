@@ -390,6 +390,13 @@
                                     ?>
                                     <br />
                                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                    <br />
+                                    <?php 
+                                        $track = get_field('track'); 
+                                        if($track){
+                                            echo '<p>('.$track.')</p>';
+                                        }
+                                    ?>
                                 </td>
                             <?php 
                                 if ($i % $tracks_per_session == ($tracks_per_session - 1)) {
@@ -420,6 +427,13 @@
                                     ?>
                                     <br />
                                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                    <br />
+                                    <?php 
+                                        $track = get_field('Track'); 
+                                        if($track){
+                                            echo '<p>'.$track.'</p>';
+                                        }
+                                    ?>
                                 </td>
                             <?php 
                                 echo '</tr>';
@@ -448,6 +462,13 @@
                                     ?>
                                     <br />
                                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                    <br />
+                                    <?php 
+                                        $track = get_field('Track'); 
+                                        if($track){
+                                            echo '<p>'.$track.'</p>';
+                                        }
+                                    ?>
                                 </td>
                             <?php 
                                 echo '</tr>';
@@ -476,6 +497,13 @@
                                     ?>
                                     <br />
                                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                    <br />
+                                    <?php 
+                                        $track = get_field('Track'); 
+                                        if($track){
+                                            echo '<p>'.$track.'</p>';
+                                        }
+                                    ?>
                                 </td>
                             <?php 
                                 echo '</tr>';
