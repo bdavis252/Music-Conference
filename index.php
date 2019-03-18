@@ -10,6 +10,7 @@
  *
  */
  get_header(); ?> 
+<h1 style="text-align:center">Saturday, September 7, 2019</h1>
 <div id="slider" class="sl-slider-wrapper">
     <div class="sl-slider animated">				
         <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
