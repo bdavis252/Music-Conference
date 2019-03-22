@@ -55,12 +55,12 @@
                     <li>Opening Hymn #72 - “Praise to the Lord”</li>
                     <li>Opening Prayer - TBD</li>
                     <?php 
-                        $post = $openers[1];
+                        $post = $openers[2];
                     ?>
                     <li>Special Musical Number - <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> (Snow) - <a href="https://ohldsmusic.org/person/kellene-vaile/" >Kellene Vaile</a>, vocalist, Jennifer Jarvis, pianist</li>
                     <li>[Keynote Speaker:  “Honoring Christ“]</li>
                     <?php 
-                        $post = $openers[2];
+                        $post = $openers[3];
                     ?>
                     <li>Closing Number - <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> from Orpheus and Eurydice (Gluck) - <a href="https://ohldsmusic.org/person/glen-kussow/" >Glen Kussow</a>, violinist</li>
 
