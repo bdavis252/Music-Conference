@@ -53,6 +53,8 @@ get_header(); ?>
                             <span class="bio"><?php the_field('bio'); ?></span>
                         </div>
 
+                        <div style="clear:left;">&nbsp;</div>
+                        
                         <?php 
                             if($workshop_ids[0] > 0) {
                                 echo '<div class="workshop_info">';
