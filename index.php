@@ -127,20 +127,11 @@
         <div class="grid_8 f_feature alpha">
             <div class="feature-content-inner first animated" style="-webkit-animation-delay: .1s; -moz-animation-delay: .1s; -o-animation-delay: .1s; -ms-animation-delay: .1s;">
                 <!-- *** Three column Box 1 *** -->
-                <?php if (compass_get_option('compass_font_icon1') != '') { ?>
-                    <p class="font_icon"><i class="<?php
-                        echo stripslashes(compass_get_option('compass_font_icon1'));
-                        ?> fa"></i></p>
-
-                <?php } elseif (compass_get_option('compass_fimg1') != '') { ?>
-                    <div class="feature-image first">
-                        <a href="<?php echo compass_get_option('compass_feature_link1'); ?>">
-                            <img src="<?php echo compass_get_option('compass_fimg1'); ?>" alt="Feature image" /></a>
-                    </div>
-                <?php } else { ?>
-
-                    <p class="font_icon"><i class="fa-cloud fa"> <?php } ?> </i></p>
-
+                <p class="font_icon">
+                    <a href="https://ohldsmusic.org/person/mayde-robertson/">
+                        <i class="fa-microphone fa"></i>
+                    </a>
+                </p>
                 <?php if (compass_get_option('compass_feature_head1') != '') { ?>
 
 
@@ -154,7 +145,7 @@
                    <?php } else { ?>
                     <a href="#"><h2><?php _e('Use Font Awesome Icons', 'compass'); ?></h2></a>
                 <?php } if (compass_get_option('compass_feature_desc1') != '') { ?>
-                    <p><?php echo stripslashes(compass_get_option('compass_feature_desc1')); ?></p>
+                    <p><?php echo stripslashes(compass_get_option('compass_feature_desc1')); ?> <a href="https://ohldsmusic.org/person/mayde-robertson/">Mayde Robertson!</a></p>
                 <?php } else { ?>
                     <p><?php _e('Go to Font Awesome and pick the icon of your choice. Copy the class of icon and past it in Theme Option Panel.', 'compass'); ?></p>				
                 <?php } ?>	

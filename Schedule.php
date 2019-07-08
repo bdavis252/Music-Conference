@@ -46,7 +46,7 @@
                 )); ?>
                 <h2>Opening Session</h2>
                 <ul>
-                    <li>Organ Prelude - Jennifer Jarvis</li>
+                    <li>Organ Prelude - TBD</li>
                     <?php 
                         $post = $openers[0];
                     ?>
@@ -57,7 +57,7 @@
                     <?php 
                         $post = $openers[2];
                     ?>
-                    <li>Special Musical Number - <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> (Snow) - <a href="https://ohldsmusic.org/person/kellene-vaile/" >Kellene Vaile</a>, vocalist, Jennifer Jarvis, pianist</li>
+                    <li>Special Musical Number - <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> (Snow) - <a href="https://ohldsmusic.org/person/kellene-vaile/" >Kellene Vaile</a>, vocalist, <a href="https://ohldsmusic.org/person/teresa-whitehead/">Teresa Whitehead</a>, pianist</li>
                     <li>[Keynote Speaker:  “Honoring Christ“]</li>
                     <?php 
                         $post = $openers[3];
