@@ -46,11 +46,11 @@
                 )); ?>
                 <h2>Opening Session</h2>
                 <ul>
-                    <li>Organ Prelude - Cleone Armold</li>
+                    <li>Organ Prelude - <a href="https://ohldsmusic.org/person/kevin-stephenson/" >Kevin Stephenson</a></li>
                     <?php 
                         $post = $openers[0];
                     ?>
-                    <li>Instrumental Prelude - <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> (Lawrence Gee) - <a href="https://ohldsmusic.org/person/cami-nelson/" >Cami Nelson</a>, flute soloist, <a href="https://ohldsmusic.org/person/betty-wells/" >Betty Wells</a>, pianist</li>
+                    <li>Instrumental Prelude - <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> (Lawrence Gee) - <a href="https://ohldsmusic.org/person/cami-nelson/" >Cami Nelson</a>, flute soloist, <a href="https://ohldsmusic.org/person/tamara-dastrup/" >Tamara Dastrup</a>, pianist</li>
                     <li>Congregational Conductor - <a href="https://ohldsmusic.org/person/katie-gardner/" >Katie Gardner</a></li>
                     <li>Opening Hymn #72 - “Praise to the Lord”</li>
                     <li>Opening Prayer - TBD</li>
