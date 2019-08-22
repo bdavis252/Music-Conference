@@ -382,8 +382,8 @@
                         <tbody>
                             <tr>
                                 <td style="width:10%"></td>
-                                <td style="width:30%">Session 1 (9:00 - 9:50 am)</td>
-                                <td style="width:30%">Session 2 (10:00 - 10:50 am)</td>
+                                <td style="width:30%">Session 1 (10:00 - 10:50 am)</td>
+                                <td style="width:30%">Session 2 (11:00 - 11:50 am)</td>
                                 <td style="width:30%">Session 3 (1:00 - 1:50 pm)</td>
                             </tr>
                             <?php for($i = 0; $i < count($posts); ++$i):
