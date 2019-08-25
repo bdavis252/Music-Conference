@@ -423,7 +423,7 @@
                         <tbody>
                             <tr>
                                 <td style="width:25%"></td>
-                                <td style="width:75%">Session 1 (9:00 - 9:50 am)</td>
+                                <td style="width:75%">Session 1 (10:00 - 10:50 am)</td>
                             </tr>
                             <?php for($i = 0; $i < count($session1Only); ++$i):
                                 $post = $session1Only[$i];
@@ -458,7 +458,7 @@
                         <tbody>
                             <tr>
                                 <td style="width:25%"></td>
-                                <td style="width:75%">Session 2 (10:00 - 10:50 am)</td>
+                                <td style="width:75%">Session 2 (11:00 - 11:50 am)</td>
                             </tr>
                             <?php for($i = 0; $i < count($session2Only); ++$i):
                                 $post = $session2Only[$i];
