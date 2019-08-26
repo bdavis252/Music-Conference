@@ -35,6 +35,17 @@ get_header(); ?>
                                 echo '<br />Track: '.get_field('track');
                                 echo '<br />Room: '.get_field('room');
                                 echo '<br />Time: '.session_to_time(get_field('session')).' (Session '.get_field('session').')';
+                                $levels = get_field('level');
+                                if ($levels){
+                                    echo '<br />Levels: ';
+                                    for($i = 0; $i < count($levels); ++$i){
+                                        $level = $levels[$i];
+                                        echo $level;
+                                        if ($i < count($levels) -1) {
+                                            echo ', ';
+                                        }
+                                    }
+                                }
                             ?>
                             
                         </div>

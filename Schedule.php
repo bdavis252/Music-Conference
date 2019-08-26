@@ -406,7 +406,20 @@
                                     <?php 
                                         $track = get_field('track'); 
                                         if($track){
-                                            echo '<p>('.$track.')</p>';
+                                            echo '<p style="margin-bottom:0;">('.$track.')</p>';
+                                        }
+
+                                        $levels = get_field('level');
+                                        if ($levels){
+                                            echo '<p>';
+                                            for($j = 0; $j < count($levels); ++$j){
+                                                $level = $levels[$j];
+                                                echo $level;
+                                                if ($j < count($levels) -1) {
+                                                    echo ', ';
+                                                }
+                                            }
+                                            echo '</p>';
                                         }
                                     ?>
                                 </td>
@@ -441,9 +454,22 @@
                                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                     <br />
                                     <?php 
-                                        $track = get_field('Track'); 
+                                        $track = get_field("track"); 
                                         if($track){
-                                            echo '<p>'.$track.'</p>';
+                                            echo '<p style="margin-bottom:0;">('.$track.')</p>';
+                                        }
+
+                                        $levels = get_field('level');
+                                        if ($levels){
+                                            echo '<p>';
+                                            for($j = 0; $j < count($levels); ++$j){
+                                                $level = $levels[$j];
+                                                echo $level;
+                                                if ($j < count($levels) -1) {
+                                                    echo ', ';
+                                                }
+                                            }
+                                            echo '</p>';
                                         }
                                     ?>
                                 </td>
@@ -476,9 +502,22 @@
                                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                     <br />
                                     <?php 
-                                        $track = get_field('Track'); 
+                                        $track = get_field("track"); 
                                         if($track){
-                                            echo '<p>'.$track.'</p>';
+                                            echo '<p style="margin-bottom:0;">('.$track.')</p>';
+                                        }
+
+                                        $levels = get_field('level');
+                                        if ($levels){
+                                            echo '<p>';
+                                            for($j = 0; $j < count($levels); ++$j){
+                                                $level = $levels[$j];
+                                                echo $level;
+                                                if ($j < count($levels) -1) {
+                                                    echo ', ';
+                                                }
+                                            }
+                                            echo '</p>';
                                         }
                                     ?>
                                 </td>
@@ -511,9 +550,22 @@
                                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                     <br />
                                     <?php 
-                                        $track = get_field('Track'); 
+                                        $track = get_field("track"); 
                                         if($track){
-                                            echo '<p>'.$track.'</p>';
+                                            echo '<p style="margin-bottom:0;">('.$track.')</p>';
+                                        }
+
+                                        $levels = get_field('level');
+                                        if ($levels){
+                                            echo '<p>';
+                                            for($j = 0; $j < count($levels); ++$j){
+                                                $level = $levels[$j];
+                                                echo $level;
+                                                if ($j < count($levels) -1) {
+                                                    echo ', ';
+                                                }
+                                            }
+                                            echo '</p>';
                                         }
                                     ?>
                                 </td>
