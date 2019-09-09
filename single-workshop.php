@@ -25,6 +25,9 @@ get_header(); ?>
                         <div class="summary">
                             <?php the_field('summary'); ?>
                         </div>
+                        <div class="post_content"> 
+                            <?php the_content(); ?>
+                        </div>		
 
                         <div class="presenter">
                             <?php 
