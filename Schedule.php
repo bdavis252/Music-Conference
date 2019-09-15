@@ -58,7 +58,7 @@
                         $post = $openers[2];
                     ?>
                     <li>Special Musical Number - <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> (Snow) - <a href="https://ohldsmusic.org/person/kellene-vaile/" >Kellene Vaile</a>, vocalist, <a href="https://ohldsmusic.org/person/teresa-whitehead/">Teresa Whitehead</a>, pianist</li>
-                    <li>Keynote Speaker:  "Honoring Christ" - <a href="https://ohldsmusic.org/person/mayde-robertson/">Mayde Robertson</a></li>
+                    <li>Keynote Speaker:  <a href="https://ohldsmusic.org/performance/honoring-christ/">Honoring Christ</a> - <a href="https://ohldsmusic.org/person/mayde-robertson/">Mayde Robertson</a></li>
                     <?php 
                         $post = $openers[3];
                     ?>
