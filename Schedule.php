@@ -15,15 +15,13 @@
             <div class="post single">
                 <h1 class="post_title"><?php the_title(); ?></h1>
                 <ul>
-                    <li>8:00 Check-in, On-site Registration, Light Breakfast</li>
-                    <li>9:00 Opening Session</li>
-                    <li>10:00 First Workshop Session</li>
-                    <li>11:00 Second Workshop Session</li>
-                    <li>12:00 Lunch and Lunchtime Entertainment</li>
-                    <li>1:00 Third Workshop Session</li>
-                    <li>1:50 Exit Survey</li>
-                    <li>2:00 Music Conference Ends</li>
-                    <li>3:00 Endowment Session at the Columbus OH Temple</li>
+                    <li>8:00 Check-in / On-site Registration / Light Breakfast</li>
+                    <li>9:00 Opening Session / Keynote Speaker / Special Music</li>
+                    <li>10:00 First Class Session</li>
+                    <li>11:00 Second Class Session</li>
+                    <li>12:00 Lunch / Lunchtime Entertainment</li>
+                    <li>1:00 Third Class Session</li>
+                    <li>2:00 Fourth Class Session</li>
                 </ul>
                 <?php
                 $openers = get_posts(array(
@@ -46,23 +44,23 @@
                 )); ?>
                 <h2>Opening Session</h2>
                 <ul>
-                    <li>Organ Prelude - <a href="https://ohldsmusic.org/person/kevin-stephenson/" >Kevin Stephenson</a></li>
+                    <!-- <li>Organ Prelude - <a href="https://ohldsmusic.org/person/kevin-stephenson/" >Kevin Stephenson</a></li> -->
                     <?php 
                         $post = $openers[0];
                     ?>
-                    <li>Instrumental Prelude - <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> (Lawrence Gee) - <a href="https://ohldsmusic.org/person/cami-nelson/" >Cami Nelson</a>, flute soloist, <a href="https://ohldsmusic.org/person/latricia-booth/" >Latricia Booth</a>, pianist</li>
-                    <li>Congregational Conductor - <a href="https://ohldsmusic.org/person/katie-gardner/" >Katie Gardner</a></li>
-                    <li>Opening Hymn #72 - “Praise to the Lord”</li>
-                    <li>Opening Prayer - TBD</li>
+                    <li>Instrumental Prelude - <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> (McDonald) - <a href="https://ohldsmusic.org/person/emily-whitehead/" >Emily Whitehead</a>, pianist</li>
+                    <!--<li>Congregational Conductor - <a href="https://ohldsmusic.org/person/katie-gardner/" >Katie Gardner</a></li>-->
+                    <!-- <li>Opening Hymn #72 - “Praise to the Lord”</li> -->
+                    <!-- <li>Opening Prayer - TBD</li> -->
+                    <?php 
+                        $post = $openers[1];
+                    ?>
+                    <li>Vocal Number - <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> (DeFord) - <a href="https://ohldsmusic.org/person/carissa-barron/" >Carissa Barron</a>, vocalist, <a href="https://ohldsmusic.org/person/julie-drogowski/">Julie Drogowski</a>, pianist</li>
+                    <li>Keynote Speaker:  <!--<a href="https://ohldsmusic.org/performance/honoring-christ/">Honoring Christ</a> - <a href="https://ohldsmusic.org/person/mayde-robertson/">Mayde Robertson</a>-->Announced in Summer</li>
                     <?php 
                         $post = $openers[2];
                     ?>
-                    <li>Special Musical Number - <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> (Snow) - <a href="https://ohldsmusic.org/person/kellene-vaile/" >Kellene Vaile</a>, vocalist, <a href="https://ohldsmusic.org/person/teresa-whitehead/">Teresa Whitehead</a>, pianist</li>
-                    <li>Keynote Speaker:  <a href="https://ohldsmusic.org/performance/honoring-christ/">Honoring Christ</a> - <a href="https://ohldsmusic.org/person/mayde-robertson/">Mayde Robertson</a></li>
-                    <?php 
-                        $post = $openers[3];
-                    ?>
-                    <li>Closing Number - <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> from Orpheus and Eurydice (Gluck) - <a href="https://ohldsmusic.org/person/glen-kussow/" >Glen Kussow</a>, violinist</li>
+                    <li>Piano Duet - <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> (Wiberg) - <a href="https://ohldsmusic.org/person/mayde-robertson/" >Mayde Robertson</a> & <a href="https://ohldsmusic.org/person/janell-wiberg/" >Janell Wiberg</a></li>
 
                     <?php wp_reset_postdata(); ?>
                 </ul>
@@ -89,8 +87,7 @@
                 <h2>Lunchtime Entertainment</h2>
                 <ul>
                     <?php 
-                        // REPLACING BARBERSHOP - railroad
-                        // L'heur exquise - Elisa Skidmore
+                        // Operetta: Refrain Audacious tar
                         $post = $lunchtime[0];
                         $performers = get_field('performers');
                     ?>
@@ -106,8 +103,8 @@
                                     echo ', ';
                                 }
                             }
-                            echo 'vocalist, ';
-                            $performer = $performers[1];
+                            echo 'vocalists, ';
+                            $performer = $performers[2];
                             $id = $performer->ID;
                             $performer_name = get_the_title($id);
                             $performer_link = get_the_permalink($id);
@@ -116,7 +113,7 @@
                     </li>
                     
                     <?php 
-                        // Classical Moonlight Sonata 
+                        // Spanish Guitar: Sons de Carrilhoes
                         $post = $lunchtime[1];
                         $performers = get_field('performers');
                     ?>
@@ -132,28 +129,41 @@
                                     echo ', ';
                                 }
                             }
-                            echo ', piano'
+                            echo ', solo guitarist'
                         ?>
                     </li>
                     
                     <?php 
-                        // Folksong: To the Sky
+                        // Japanese: Lullaby of Takeda
                         $post = $lunchtime[2];
                         $performers = get_field('performers');
                     ?>
                     <li><?php the_field('genre'); ?> - <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> (<?php the_field('composer'); ?>) - 
                         <?php 
-                            for($j = 0; $j < count($performers)-1; ++$j) {
-                                $performer = $performers[$j];
-                                $id = $performer->ID;
-                                $performer_name = get_the_title($id);
-                                $performer_link = get_the_permalink($id);
-                                echo '<a href="'.$performer_link.'">'.$performer_name.'</a>';
-                                if ($j < count($performers) -1) {
-                                    echo ', ';
-                                }
-                            }
-                            echo 'vocalist, ';
+                            $performer = $performers[0];
+                            $id = $performer->ID;
+                            $performer_name = get_the_title($id);
+                            $performer_link = get_the_permalink($id);
+                            echo '<a href="'.$performer_link.'">Noriko Handy</a>, ';
+                            echo '<a href="'.$performer_link.'">Maria Takamasa</a>, ';
+                            echo '<a href="'.$performer_link.'">Tomoko Seino</a>, vocalists, ';
+                            echo '<a href="'.$performer_link.'">Yuko Rader</a>, pianist';
+                            //echo ' (<a href="'.$performer_link.'">'.$performer_name.'</a>)';
+                        ?>
+                    </li>
+
+                    <?php 
+                        // Untold Story Greg Coons Mayde
+                        $post = $lunchtime[3];
+                        $performers = get_field('performers');
+                    ?>
+                    <li><?php the_field('genre'); ?> - <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> (<?php the_field('composer'); ?>) - 
+                        <?php 
+                            $performer = $performers[0];
+                            $id = $performer->ID;
+                            $performer_name = get_the_title($id);
+                            $performer_link = get_the_permalink($id);
+                            echo '<a href="'.$performer_link.'">'.$performer_name.'</a>, hornist, ';
                             $performer = $performers[1];
                             $id = $performer->ID;
                             $performer_name = get_the_title($id);
@@ -163,28 +173,7 @@
                     </li>
                     
                     <?php 
-                        // Ragtime Entertainers
-                        $post = $lunchtime[3];
-                        $performers = get_field('performers');
-                    ?>
-                    <li><?php the_field('genre'); ?> - <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> (<?php the_field('composer'); ?>) - 
-                        <?php 
-                            for($j = 0; $j < count($performers); ++$j) {
-                                $performer = $performers[$j];
-                                $id = $performer->ID;
-                                $performer_name = get_the_title($id);
-                                $performer_link = get_the_permalink($id);
-                                echo '<a href="'.$performer_link.'">'.$performer_name.'</a>';
-                                if ($j < count($performers) -1) {
-                                    echo ', ';
-                                }
-                            }
-                            echo ', pianist'
-                        ?>
-                    </li>
-                    
-                    <?php 
-                        // Broadway Lonely Goatherd
+                        // Art Song: Gretchen am Spinrade
                         $post = $lunchtime[4];
                         $performers = get_field('performers');
                     ?>
@@ -200,40 +189,13 @@
                                     echo ', ';
                                 }
                             }
-                            echo ', vocalists';
+                            echo ', vocalist';
                         ?>
                     </li>
                     
                     <?php 
-                        // REPLACED Novelty Yankee Doodle
-                        // Polish Dance
+                        // Baroque Ragtime G String Maple Leaf
                         $post = $lunchtime[5];
-                        $performers = get_field('performers');
-                    ?>
-                    <li><?php the_field('genre'); ?> - <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> (<?php the_field('composer'); ?>) - 
-                        <?php 
-                            for($j = 0; $j < count($performers)-1; ++$j) {
-                                $performer = $performers[$j];
-                                $id = $performer->ID;
-                                $performer_name = get_the_title($id);
-                                $performer_link = get_the_permalink($id);
-                                echo '<a href="'.$performer_link.'">'.$performer_name.'</a>';
-                                if ($j < count($performers) -1) {
-                                    echo ', ';
-                                }
-                            }
-                            echo 'violinist, ';
-                            $performer = $performers[1];
-                            $id = $performer->ID;
-                            $performer_name = get_the_title($id);
-                            $performer_link = get_the_permalink($id);
-                            echo '<a href="'.$performer_link.'">'.$performer_name.'</a>, pianist';
-                        ?>
-                    </li>
-                    
-                    <?php 
-                        // Jump Blues Boogie Woogie
-                        $post = $lunchtime[6];
                         $performers = get_field('performers');
                     ?>
                     <li><?php the_field('genre'); ?> - <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> (<?php the_field('composer'); ?>) - 
@@ -248,13 +210,54 @@
                                     echo ', ';
                                 }
                             }
-                            echo ', vocalists'
+                            echo ', brass duo';
+                        ?>
+                    </li>
+
+                    <?php 
+                        // Broadway: Wonderful day
+                        $post = $lunchtime[6];
+                        $performers = get_field('performers');
+                    ?>
+                    <li><?php the_field('genre'); ?> - <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> (<?php the_field('composer'); ?>) - 
+                    <?php 
+                            $performer = $performers[0];
+                            $id = $performer->ID;
+                            $performer_name = get_the_title($id);
+                            $performer_link = get_the_permalink($id);
+                            echo '<a href="'.$performer_link.'">'.$performer_name.'</a>, vocalist, ';
+                            $performer = $performers[1];
+                            $id = $performer->ID;
+                            $performer_name = get_the_title($id);
+                            $performer_link = get_the_permalink($id);
+                            echo '<a href="'.$performer_link.'">'.$performer_name.'</a>, pianist';
                         ?>
                     </li>
                     
                     <?php 
-                        // Popular Gabriel Oboe
+                        // Early Modern Andante Festivo
                         $post = $lunchtime[7];
+                        $performers = get_field('performers');
+                    ?>
+                    <li><?php the_field('genre'); ?> - <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> (<?php the_field('composer'); ?>) - 
+                        <?php 
+                            for($j = 0; $j < count($performers); ++$j) {
+                                $performer = $performers[$j];
+                                $id = $performer->ID;
+                                $performer_name = get_the_title($id);
+                                $performer_link = get_the_permalink($id);
+                                echo '<a href="'.$performer_link.'">'.$performer_name.'</a>';
+                                if ($j < count($performers) -1) {
+                                    echo ', ';
+                                }
+                            }
+                            echo ', string quartet'
+                        ?>
+                    </li>
+                    
+                    <?php 
+                        // American Folksong Old Dan Tucker
+                        $post = $lunchtime[8];
                         $performers = get_field('performers');
                     ?>
                     <li><?php the_field('genre'); ?> - <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> (<?php the_field('composer'); ?>) - 
@@ -265,29 +268,12 @@
                                 $performer_name = get_the_title($id);
                                 $performer_link = get_the_permalink($id);
                                 echo '<a href="'.$performer_link.'">'.$performer_name.'</a>';
+                                if ($j < count($performers) -2) {
+                                    echo ', ';
+                                }
                             }
-                            echo ', oboist, ';
-                            $performer = $performers[1];
-                            $id = $performer->ID;
-                            $performer_name = get_the_title($id);
-                            $performer_link = get_the_permalink($id);
-                            echo '<a href="'.$performer_link.'">'.$performer_name.'</a>, pianist';
-                        ?>
-                    </li>
-                    
-                    <?php 
-                        // Operetta Vilia
-                        $post = $lunchtime[8];
-                        $performers = get_field('performers');
-                    ?>
-                    <li><?php the_field('genre'); ?> - <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> (<?php the_field('composer'); ?>) - 
-                        <?php 
-                            $performer = $performers[0];
-                            $id = $performer->ID;
-                            $performer_name = get_the_title($id);
-                            $performer_link = get_the_permalink($id);
-                            echo '<a href="'.$performer_link.'">'.$performer_name.'</a>, vocalist, ';
-                            $performer = $performers[1];
+                            echo ', vocalists, ';
+                            $performer = $performers[4];
                             $id = $performer->ID;
                             $performer_name = get_the_title($id);
                             $performer_link = get_the_permalink($id);
@@ -375,22 +361,42 @@
                         'query_two' => 'ASC',
                     )
                 ));
+                $session4Only = get_posts(array(
+                    'post_type'			=> 'workshop',
+                    'posts_per_page'	=> -1,
+                    'meta_query' => array(
+                        'relation' => 'AND',
+                        'query_one' => array(
+                            'key' => 'room',
+                        ),
+                        'query_two' => array(
+                            'key' => 'session',
+                            'value' => 4,
+                            'compare' => '='
+                        ), 
+                    ),
+                    'orderby' => array( 
+                        'query_one' => 'ASC',
+                        'query_two' => 'ASC',
+                    )
+                ));
 
                 if( $posts ): ?>
                     <?php 
-                        $tracks_per_session = 3;
+                        $sessions_per_track = 4;
                     ?>
                     <table class="wp-block-table large_only">
                         <tbody>
                             <tr>
-                                <td style="width:10%"></td>
-                                <td style="width:30%">Session 1 (10:00 - 10:50 am)</td>
-                                <td style="width:30%">Session 2 (11:00 - 11:50 am)</td>
-                                <td style="width:30%">Session 3 (1:00 - 1:50 pm)</td>
+                                <td style="width:12%"></td>
+                                <td style="width:22%">Session 1 (10:00 - 10:50 am)</td>
+                                <td style="width:22%">Session 2 (11:00 - 11:50 am)</td>
+                                <td style="width:22%">Session 3 (1:00 - 1:50 pm)</td>
+                                <td style="width:22%">Session 4 (2:00 - 2:50 pm)</td>
                             </tr>
                             <?php for($i = 0; $i < count($posts); ++$i):
                                 $post = $posts[$i];
-                                if ($i % $tracks_per_session == 0) {
+                                if ($i % $sessions_per_track == 0) {
                                     echo '<tr>';
                                     echo '<td>'.get_field('room').'</td>';
                                 }
@@ -426,7 +432,7 @@
                                     ?>
                                 </td>
                             <?php 
-                                if ($i % $tracks_per_session == ($tracks_per_session - 1)) {
+                                if ($i % $sessions_per_track == ($sessions_per_track - 1)) {
                                     echo '</tr>';
                                 }
                             ?>
@@ -538,6 +544,54 @@
                             </tr>
                             <?php for($i = 0; $i < count($session3Only); ++$i):
                                 $post = $session3Only[$i];
+                                echo '<tr>';
+                                echo '<td>'.get_field('room').'</td>';
+                            ?>
+                                <td>
+                                    <?php 
+                                        $presenter = get_field('presenter'); 
+                                        if($presenter){
+                                            echo '<a class="presenter-title" href="'.$presenter->guid.'">'.$presenter->post_title.'</a>';
+                                        }
+                                    ?>
+                                    <br />
+                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                    <br />
+                                    <?php 
+                                        $track = get_field("track"); 
+                                        if($track){
+                                            echo '<p style="margin-bottom:0;">('.$track.')</p>';
+                                        }
+
+                                        $levels = get_field('level');
+                                        if ($levels){
+                                            echo '<p>';
+                                            for($j = 0; $j < count($levels); ++$j){
+                                                $level = $levels[$j];
+                                                echo $level;
+                                                if ($j < count($levels) -1) {
+                                                    echo ', ';
+                                                }
+                                            }
+                                            echo '</p>';
+                                        }
+                                    ?>
+                                </td>
+                            <?php 
+                                echo '</tr>';
+                            ?>
+                            <?php endfor; ?>
+                        </tbody>
+                    </table>
+
+                    <table class="wp-block-table small_only">
+                        <tbody>
+                            <tr>
+                                <td style="width:25%"></td>
+                                <td style="width:75%">Session 4 (2:00 - 2:50 pm)</td>
+                            </tr>
+                            <?php for($i = 0; $i < count($session4Only); ++$i):
+                                $post = $session4Only[$i];
                                 echo '<tr>';
                                 echo '<td>'.get_field('room').'</td>';
                             ?>

@@ -10,8 +10,8 @@
  *
  */
  get_header(); ?> 
-<h1 style="text-align:center">Saturday, September 7, 2019 - <b>Changed location!</b> - <a href="https://ohldsmusic.org/help-faqs/#where">Columbus Stake Center</a></h1>
-<h1 style="text-align:center">Class Handouts are posted on workshop pages as they are available.</h1>
+<h1 style="text-align:center">Saturday, September 12, 2020 - <b>Changed location (again)!</b> - <a href="https://ohldsmusic.org/help-faqs/#where">Columbus South Stake Center</a></h1>
+<!-- <h1 style="text-align:center">Class Handouts are posted on workshop pages as they are available.</h1> -->
 <div id="slider" class="sl-slider-wrapper">
     <div class="sl-slider animated">				
         <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
@@ -129,9 +129,11 @@
             <div class="feature-content-inner first animated" style="-webkit-animation-delay: .1s; -moz-animation-delay: .1s; -o-animation-delay: .1s; -ms-animation-delay: .1s;">
                 <!-- *** Three column Box 1 *** -->
                 <p class="font_icon">
-                    <a href="https://ohldsmusic.org/person/mayde-robertson/">
+                    <i class="fa-microphone fa"></i>
+                    <!-- TODO -->
+                    <!-- <a href="https://ohldsmusic.org/person/mayde-robertson/">
                         <i class="fa-microphone fa"></i>
-                    </a>
+                    </a> -->
                 </p>
                 <?php if (compass_get_option('compass_feature_head1') != '') { ?>
 
@@ -145,11 +147,12 @@
                     ?>"><h2><?php echo stripslashes(compass_get_option('compass_feature_head1')); ?></h2></a>
                    <?php } else { ?>
                     <a href="#"><h2><?php _e('Use Font Awesome Icons', 'compass'); ?></h2></a>
-                <?php } if (compass_get_option('compass_feature_desc1') != '') { ?>
-                    <p><?php echo stripslashes(compass_get_option('compass_feature_desc1')); ?> <a href="https://ohldsmusic.org/person/mayde-robertson/">Mayde Robertson</a>! Her notes are available <a href="https://ohldsmusic.org/performance/honoring-christ/">here</a>.</p>
-                <?php } else { ?>
-                    <p><?php _e('Go to Font Awesome and pick the icon of your choice. Copy the class of icon and past it in Theme Option Panel.', 'compass'); ?></p>				
-                <?php } ?>	
+                <?php } ?>
+                    <p>
+                        <!-- <?php echo stripslashes(compass_get_option('compass_feature_desc1')); ?> -->
+                            <!-- <a href="https://ohldsmusic.org/person/mayde-robertson/">Mayde Robertson</a>! Her notes are available <a href="https://ohldsmusic.org/performance/honoring-christ/">here</a>. -->
+                            The keynote speaker will be announced later in the year.
+                    </p>
             </div>
         </div>
         <div class="grid_8 f_feature alpha">
